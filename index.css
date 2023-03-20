@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+p {
+    margin: 0;
+    color: #F8F8F8;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+html {
+    background-color: #752a2a;
+}
+
+body {
+    padding: 1em;
+    margin: 1em auto;
+    max-width: 600px;
+    background-color: rgb(56, 193, 180);
+    border-radius: 15px;
+}
+
+header {
+    width: 95%;
+    margin: 1em auto;
+}
+
+button {
+    border: none;
+}
+
+/* Header */
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-icons {
+    width: 35px;
+    height: 35px;
+}
+
+.header-paw-icon {
+    width: 84px;
+    height: 42px;
+}
+
+/* Main */
+
+.final-text {
+    display: none;
+    text-align: center;
+    font-size: 3rem;
+    margin: 4em 0.5em 0 0.5em;
+    color: #5b25b2;
+}
+
+.character-main {
+    width: 100%;
+}
+
+.character-section {
+    display: grid;
+    grid-template: 86% auto auto / 3% 40% 57%;
+    width: 95%;
+    margin: auto;
+    position: relative;
+}
+
+.character-img {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.like-and-dislike-stamp {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    width: 150px;
+    height: 70px;
+    transform: rotateY(0deg) rotate(325deg);
+    display: none;
+}
+
+.character-name-and-age {
+    grid-row: 2 / 3;
+    grid-column: 2;
+    align-self: flex-end;
+}
+
+.character-message {
+    grid-row: 3 / 4;
+    grid-column: 2;
+    margin-bottom: 0.5em;
+    font-size: 1rem;
+    align-self: flex-start;
+}
+
+.like-btn-section,
+.dislike-btn-section {
+    background-color: #FFFFFF;
+    display: inline-block;
+    padding: 1em;
+    border-radius: 50%;
+    box-shadow: rgba(14, 64, 57, 0.24) 0px 3px 8px;
+}
+
+.like-and-dislike-section {
+    margin: 1em auto;
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+}
