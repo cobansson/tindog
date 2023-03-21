@@ -117,6 +117,15 @@ button {
     padding: 1em;
     border-radius: 50%;
     box-shadow: rgba(14, 64, 57, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.like-btn-section:hover {
+    background-color: #d5f3f5;
+}
+
+.dislike-btn-section:hover {
+    background-color: #ffecec;
 }
 
 .like-and-dislike-section {

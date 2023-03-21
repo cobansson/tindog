@@ -8,31 +8,14 @@ const characterHtml = document.getElementById("character-main");
 const main = document.getElementById("main");
 const finalText = document.getElementById("final-text");
 
-likeBtn.addEventListener("click", like);
-dislikeBtn.addEventListener("click", dislike);
-
 const likeImage = "images/badge-like.png";
 const dislikeImage = "images/badge-nope.png";
 
-function like() {
-    characterHtml.innerHTML = new DogProfile(dogsArray[0]).dogProfileHtml(likeImage);
-    document.getElementById("stamp-img").style.display = "block";
-    likeBtn.style['pointer-events'] = 'none';
-    dislikeBtn.style['pointer-events'] = 'none';
-    setTimeout (() => {
-        if (dogs.length > 0) {
-            likeBtn.style['pointer-events'] = 'auto';
-            dislikeBtn.style['pointer-events'] = 'auto';
-            render()
-        } else {
-            main.style.display = "none";
-            finalText.style.display = "block";
-        }
-    }, 1500)
-}
+likeBtn.addEventListener("click", () => action(likeImage));
+dislikeBtn.addEventListener("click", () => action(dislikeImage));
 
-function dislike() {
-    characterHtml.innerHTML = new DogProfile(dogsArray[0]).dogProfileHtml(dislikeImage);
+function action(img) {
+    characterHtml.innerHTML = new DogProfile(dogsArray[0]).dogProfileHtml(img);
     document.getElementById("stamp-img").style.display = "block";
     likeBtn.style['pointer-events'] = 'none';
     dislikeBtn.style['pointer-events'] = 'none';
