@@ -1,4 +1,4 @@
-import { dogsArray, getNewDogsObject } from "./utils.js";
+import { dogsArray, setNewDogsHtml } from "./utils.js";
 import { DogProfile } from "./constructor.js";
 import { dogs } from "./dogs.js";
 
@@ -32,7 +32,8 @@ function action(img) {
 }
 
 function render() {
-    characterHtml.innerHTML = new DogProfile(getNewDogsObject()).dogProfileHtml();
+    characterHtml.innerHTML = setNewDogsHtml();
+    document.getElementById("stamp-img").style.display = "none";
 }
 
 render();
